@@ -33,6 +33,7 @@
 }
 
 .card-header h6 {
+  display: inline-block;
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -140,4 +141,9 @@ td {
   vertical-align: top;
   border-top: 1px solid;
   border: 1px solid #e3e6f0;
+}
+
+button {
+  cursor: pointer;
+  padding: 1%;
 }
