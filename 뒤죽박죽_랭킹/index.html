@@ -9,10 +9,29 @@
   </head>
   <body>
     <div class="container">
-      <div class="section">
+      <div class="section-input">
+        <div class="card-header">
+          <h6>우수사원 등록</h6>
+        </div>
+        <div class="input-wrapper">
+          <label for="rank">랭킹 : </label>
+          <input id="rank" type="number" />
+          <label for="name">이름 : </label>
+          <input id="name" type="text" maxlength="15" />
+          <label for="job">직책 : </label>
+          <input id="job" type="text" />
+          <label for="loc">부서 위치 : </label>
+          <input id="loc" type="text" />
+          <label for="hiredate">입사 날짜 : </label>
+          <input id="hiredate" type="text" />
+        </div>
+        <div class="btn-wrapper">
+          <button type="button">사원 등록</button>
+        </div>
+      </div>
+      <div class="section-table">
         <div class="card-header">
           <h6>우수사원 목록</h6>
-          <button type="button">사원 추가</button>
         </div>
         <div class="card-body">
           <div class="table-wrapper">
@@ -73,8 +92,21 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // 소스작성
-      // 문제: 사원추가 버튼을 누르면 tbody에 데이터를 추가 하시오.
+      // 소스 작성
+      /* 
+      1번 문제: 사원등록 버튼을 클릭 했을 때 랭킹 부터 입사날짜까지 빈공간이 있으면
+      '데이터를 입력해주세요!' alret 띄우고, 빈공간을 입력한 input에 focus를 하시오.
+
+      2번 문제: Office는 	New York, San Francisco, London 중 한 곳입니다.
+
+      3번 문제: 이미 등록된 랭킹은 중복될 수 없습니다.
+
+      4번 문제: 1~3번 문제이어서 해당 데이터를 tbody안에 추가 하시오.
+      단, 마지막 행에 추가 하시오.
+
+      ***5번 문제: (해당 문제는 할 수 있는 사람만 도전 해보시오.)
+      ↓을 누르면 내림차순, ↑을 누르면 오름차순으로 tr을 정렬하시오.
+      */
     </script>
   </body>
 </html>
