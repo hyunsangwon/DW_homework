@@ -23,9 +23,12 @@
 <p id="greetings">안녕하세요</p>
 ```
 5. 모르면 구글링을 이용해서 풀 수 있도록 노력한다. (네이버링 X)
-  구글링 서치하는 방법 in 다음에 프로그래밍 언어가 온다.
+```javascript
+  /* 구글링 서치하는 방법 in 다음에 프로그래밍 언어가 온다.
   영어로 서치하는 습관을 기르자. (좋은 서치 === 빠른 퇴근)
   ex) how to append in jquery
-      how to remove in jquery
+      how to remove in jquery */
+```
+  
       
   
