@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이달의 우수사원</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -14,16 +15,11 @@
           <h6>우수사원 등록</h6>
         </div>
         <div class="input-wrapper">
-          <label for="rank">랭킹 : </label>
-          <input id="rank" type="number" />
-          <label for="name">이름 : </label>
-          <input id="name" type="text" maxlength="15" />
-          <label for="job">직책 : </label>
-          <input id="job" type="text" />
-          <label for="loc">부서 위치 : </label>
-          <input id="loc" type="text" />
-          <label for="hiredate">입사 날짜 : </label>
-          <input id="hiredate" type="text" />
+          <input id="rank" type="number" placeholder="랭킹을 입력하세요..."/>
+          <input id="name" type="text" maxlength="15" placeholder="이름을 입력하세요..."/>
+          <input id="job" type="text" placeholder="직업을 입력하세요..."/>
+          <input id="loc" type="text" placeholder="부서위치를 입력하세요..."/>
+          <input id="hiredate" type="text" placeholder="입사날짜를 입력하세요..."/>
         </div>
         <div class="btn-wrapper">
           <button type="button">사원 등록</button>
@@ -41,7 +37,7 @@
                 <table>
                   <thead>
                     <tr role="row">
-                      <th>No</th>
+                      <th>No <i id="asc" class='bx bx-up-arrow-alt'></i><i id="desc" class='bx bx-down-arrow-alt' ></i></th>
                       <th>Name</th>
                       <th>Position</th>
                       <th>Office</th>
