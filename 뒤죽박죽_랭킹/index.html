@@ -118,9 +118,9 @@
       }); 
       //부서 확인
       function isDeptName(dname){
-        const deptName = ['New York','San Francisco','London'];
+        const DEPT_NAME = ['New York','San Francisco','London'];
         var isCheck = false;
-        deptName.forEach(function(element){
+        DEPT_NAME.forEach(function(element){
           if(element === dname) isCheck = true;
         });
         return isCheck;
