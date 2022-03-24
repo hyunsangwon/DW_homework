@@ -82,8 +82,33 @@
     console.log(sum);
     console.log(count);
     console.log(totalSum);
+    
     //json값을 html로 표현하는 방법
     $('.container').append(carData[0].driver);
+    
+    //날짜 계산하는법
+    var start = carData[0].createAt;
+    var end = carData[0].endAt;
+    // step1. 문자를 날짜형식으로 변경.
+    start = new Date(start);
+    console.log(start);
+    end = new Date(end);
+    console.log(end);
+    // step2. 날짜를 초단위로 변경.
+    // 1970년 1월 1일 자정기준 부터 Millisecond 시간!
+    // 1초 === 1000ms, 1분 === 60초 
+    console.log(start.getTime());//getTime이 Millisecond시간으로 계산.
+    console.log(end.getTime());
+    // step3. 끝시간 - 처음시간
+    //초
+    var diffSeconds = (end.getTime() - start.getTime()) / (1000);
+    console.log(diffSeconds);
+    //분
+    var diffMinute = (end.getTime() - start.getTime()) / (1000 * 60);
+    console.log(diffMinute);
+    //시간
+    var diffHour = (end.getTime() - start.getTime()) / (1000 * 60 * 60);
+    console.log(diffHour);
 </script>
 </body>
 </html>
