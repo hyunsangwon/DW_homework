@@ -44,15 +44,16 @@
        const MAX_LEN = 30;
        var userId = $('#userId').val().trim().toLowerCase();
        var userPassword = $('#userPassword').val().trim();
-       if(userId.length <= MAX_LEN && userPassword <= MAX_LEN){
-         if(userId !=='' || userPassword !== ''){
-           alert('로그인 완료');
-           return true;
-         }
-       }
+        if(userId.length <= MAX_LEN && userPassword <= MAX_LEN){
+          return false;
+        }
+        if(userId !== '' && userPassword !== ''){
+          alert('로그인 완료');
+          return true;
+        }
      });
-       /*5번 문제: 로그인 상태 유지를 누르면 
-       '해당 브라우저에 로그인 정보를 저장하시겠습니까?' 라는 confirm창 띄우기*/
+      /*5번 문제: 로그인 상태 유지를 누르면 
+      '해당 브라우저에 로그인 정보를 저장하시겠습니까?' 라는 confirm창 띄우기*/
      $('#login-status').on('click',function (){
        var isChecked = $('#login-status').is(':checked');//checked 여부 확인
        if(isChecked){
