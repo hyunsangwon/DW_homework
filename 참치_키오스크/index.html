@@ -86,10 +86,10 @@
       background-color: #ffffff;
       color: #4e4e4e; */
       $('.nav ul li').on('click',function(e){
-        var elementInnerHTML = e.target.innerHTML;//내가 클릭한 메뉴!
+        var elementInnerHTML = e.target.innerHTML;// 내가 클릭한 메뉴!
         $('.nav ul li').each(function(index, item){
           var menuName = $(item).text();
-          if(elementInnerHTML === menuName){
+          if(elementInnerHTML === menuName){ //내가 선택한 메뉴이름과 기존 메뉴이름이 같다면
             $(item).css('backgroundColor', '#ffffff');
             $(item).css('color', '#4e4e4e');
           }
@@ -123,30 +123,39 @@
       function setTotalMoney(elementId){
         //수정 필요
         var elementChildrenInnerText = $('#'+elementId).prev()[0].children[0].innerText;
-        var money = Number(elementChildrenInnerText.replace(",","")); //Number() 문자에서 숫자로 변환
+        var money = Number(elementChildrenInnerText.replace(",","")); //Number() : 문자에서 숫자로 변환
         if((sumMoney + money) <= 100000){
           sumMoney += money;
           $('#totalMoney').text(sumMoney);
-          setMenu(elementId);
+          setMenuArray(elementId);
         }
       }
-      //선택한 메뉴
-      function setMenu(elementId){
+      //선택한 메뉴 배열에 담기
+      function setMenuArray(elementId){
         var menu = $('#'+elementId).parent().children()[0].innerText;
         var days = $('#'+elementId).parent().children().children()[0].innerText;
         var menuName = menu+days;
         menuArray.push(menuName);
       }
       //최종 선택한 메뉴 보여주기
-      function getMenu(){
+      function getMenuArray(){
+        /* 
+          reduce에는 4가지 파라미터(인수, 인자값, 매개변수)를 가짐
+          accumulator : 반환값을 누적
+          currentValue : 처리할 현재 요소
+          currentIndex (Optional) : 현재 요소의 인덱스
+          array(Optional) : reduce()를 호출한 배열
+        */
         //acc : 누적값, cur : 현재값
         const result = menuArray.reduce(function(acc, cur){
-            if(acc[cur]) {
-                acc[cur]++;
-            }else {
-                acc[cur]= 1;
-            }
-            return acc;
+          console.log(acc);
+          console.log('cur => '+cur);
+          if(acc[cur]) {//중복 선택한 메뉴는 카운팅
+              acc[cur]++;
+          }else {
+              acc[cur]=1;
+          }
+          return acc;
         },{}); // {} : initialValue
         return result;
       }
@@ -164,13 +173,12 @@
           return false
         }
         var selectedMenu = '';
-        var result = getMenu();
-        var keys = Object.keys(result); //키를 가져옴.
+        var result = getMenuArray();
+        var keys = Object.keys(result); //json 키를 가져옴.
         keys.forEach(function(element){
           selectedMenu += element+' '+result[element]+'개 ' 
         });
-        var check = '주문한 참치는 '+selectedMenu+'입니다. 주문하시겠습니까?';
-        confirm(check);
+        confirm('주문한 참치는 '+selectedMenu+'입니다. 주문하시겠습니까?');
       });
     </script>
   </body>
