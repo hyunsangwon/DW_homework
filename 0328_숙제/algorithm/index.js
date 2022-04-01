@@ -7,7 +7,7 @@ let len =  array.length;
 
 for(let i=len; i > 0; i--){
     isSwap = false
-    for (let j=0; j < (len - 1); j++) {
+    for (let j=0; j < (i - 1); j++) {
         if (array[j] > array[j+1]) {
             let temp = array[j];
             array[j] = array[j+1];
