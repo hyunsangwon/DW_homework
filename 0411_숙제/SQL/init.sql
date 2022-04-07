@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS devices_history
     history_no BIGINT(20) AUTO_INCREMENT NOT NULL PRIMARY KEY COMMENT '히스토리 번호',
     packet_id INTEGER(2) CHECK (packet_id IN (0, 1, 2, 3, 4, 5)) COMMENT '패킷 ID',
     device_uuid VARCHAR(10) NOT NULL COMMENT '디바이스 고유번호',
-    cell_id VARCHAR(10) COMMENT '기지국 아이디'
+    cell_id VARCHAR(10) COMMENT '기지국 아이디',
     battery INTEGER(4) COMMENT '배터리',
     create_at DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '수신 날짜',
     FOREIGN KEY (device_uuid) REFERENCES devices (device_uuid)
@@ -39,7 +39,16 @@ INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at)
 INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(3,'1388300','39991',8, '2021-12-07 11:10:37');
 INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(5,'1388300','39991',1, '2021-12-07 12:55:31');
 
-INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(0,'2288330','39991',32, '2021-12-07 15:30:37');
-INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(1,'2288330','39991',30, '2021-12-07 16:12:40');
-INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(1,'2288330','39991',30, '2021-12-07 16:40:11');
-INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(5,'2288330','39991',30, '2021-12-07 17:30:00');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(0,'1988311','39980',32, '2021-12-07 15:30:37');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(1,'1988311','39980',30, '2021-12-07 16:12:40');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(1,'1988311','39980',30, '2021-12-07 16:40:11');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(5,'1988311','39980',30, '2021-12-07 17:30:00');
+
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(0,'2598300','29077',77, '2021-12-07 10:30:00');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(1,'2598300','29077',55, '2021-12-07 11:10:13');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(4,'2598300','29077',50, '2021-12-07 12:10:11');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(4,'2598300','29077',49, '2021-12-07 13:10:14');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(4,'2598300','29077',40, '2021-12-07 14:10:10');
+INSERT INTO devices_history(packet_id, device_uuid, cell_id, battery, create_at) VALUES(4,'2598300','29077',22, '2021-12-07 15:10:07');
+
+COMMIT;
