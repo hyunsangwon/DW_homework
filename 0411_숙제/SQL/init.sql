@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS customer_history_purchase
 INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('4431977', 'SMITH', '브론즈', TRUE, '2021-12-07 06:30:13');
 INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('5194998', 'ALLEN', '실버', FALSE, '2021-12-07 07:00:23');
 INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('16045624', 'WARD', '실버', FALSE, '2021-12-07 09:30:37');
-INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('17810814	', 'JONES', '실버', FALSE, '2021-12-10 10:20:29');
+INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('17810814', 'JONES', '실버', FALSE, '2021-12-10 10:20:29');
 INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('22740286', 'MARTIN', '골드', FALSE, '2021-12-11 12:55:31');
 INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('22868779', 'BLAKE', '골드', FALSE, '2021-12-11 12:55:31');
 INSERT INTO customer(customer_id, customer_name, grade, is_use, create_at) VALUES('20381000', 'KING', 'VIP', FALSE, '2021-12-25 01:13:11');
