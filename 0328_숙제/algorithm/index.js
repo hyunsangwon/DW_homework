@@ -5,6 +5,7 @@ let count = 0; //총 몇회전 했는지 알아내는 변수
 let isSwap = false;
 let len =  array.length;
 for(let i=len; i > 0; i--){
+    isSwap = false;
     for (let j=0; j < (i - 1); j++) {
         if (array[j] > array[j+1]) {
             let temp = array[j]; //temp를 사용하지 않으면 i+1번째 배열에 i번째 원소(index 값)를 swap할 수 없다.
