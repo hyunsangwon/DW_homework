@@ -6,6 +6,7 @@ public class SelectionSort {
 		int array[] = {9, 6, 7, 3, 5};
 		boolean isChange = false; //교환 여부 판단!
 		int arrLen = array.length;
+
 		for(int i=0; i<(arrLen-1); i++){ //4회전 세팅
 			isChange = false;
 			int min = array[i];//0번째 원소를 초기값으로 세팅!
@@ -26,6 +27,8 @@ public class SelectionSort {
             if(!isChange) break; //더이상 찾을께 없으면 멈추자
 		}//outer-for end
 		
-		
+		for(int i : array){
+			System.out.print(i+" ");
+		}
 	}
 }
