@@ -19,12 +19,14 @@ public class SelectionSort {
 					isChange = true; //최솟값이 있음!
 				}
 			}//inner-for end
+			if(!isChange) continue; //더이상 찾을께 없으면
+			
 			if(isChange){
 				int temp = array[i];
 				array[i] = min;
 				array[index] = temp;
 			}
-            if(!isChange) break; //더이상 찾을께 없으면 멈추자
+          
 		}//outer-for end
 		
 		for(int i : array){
